@@ -167,6 +167,52 @@
     });
   });
 
+  /* ---------- Theme switcher ---------- */
+  var THEMES = { nebula: 'Nebula', terminal: 'Terminal', dashboard: 'Dashboard', blueprint: 'Blueprint', light: 'Light' };
+  var THEME_KEY = 'os-portfolio-theme';
+  var switcher = document.getElementById('themeSwitcher');
+  var themeBtn = document.getElementById('themeBtn');
+  var themeName = document.getElementById('themeName');
+  function setTheme(name) {
+    if (!THEMES[name]) name = 'nebula';
+    document.documentElement.dataset.theme = name;
+    try { localStorage.setItem(THEME_KEY, name); } catch (e) {}
+    if (themeName) themeName.textContent = THEMES[name];
+    document.querySelectorAll('#themeMenu [data-set-theme]').forEach(function (b) {
+      var on = b.getAttribute('data-set-theme') === name;
+      b.classList.toggle('on', on);
+      b.setAttribute('aria-checked', on ? 'true' : 'false');
+    });
+    if (typeof window.__setHeroTheme === 'function') window.__setHeroTheme(name);
+  }
+  if (switcher && themeBtn) {
+    themeBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var open = switcher.classList.toggle('open');
+      themeBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    document.querySelectorAll('#themeMenu [data-set-theme]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        setTheme(b.getAttribute('data-set-theme'));
+        switcher.classList.remove('open');
+        themeBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+    document.addEventListener('click', function (e) {
+      if (!switcher.contains(e.target)) {
+        switcher.classList.remove('open');
+        themeBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        switcher.classList.remove('open');
+        themeBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+  setTheme(document.documentElement.dataset.theme || 'nebula');
+
   /* ---------- Footer year ---------- */
   document.getElementById('year').textContent = new Date().getFullYear();
 })();

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="nebula">
 <head>
+<script>try{document.documentElement.dataset.theme=localStorage.getItem('os-portfolio-theme')||'nebula';}catch(e){}</script>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Osama Shahid — Senior Data Engineer</title>
@@ -8,8 +9,9 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2306060c'/%3E%3Ctext x='32' y='42' font-family='Arial' font-size='28' font-weight='bold' text-anchor='middle' fill='%2322d3ee'%3EOS%3C/text%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/themes.css" />
 </head>
 <body>
 
@@ -26,6 +28,18 @@
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
       <a href="#contact" class="nav-cta">Contact</a>
+    </div>
+    <div class="theme-switcher" id="themeSwitcher">
+      <button class="theme-btn" id="themeBtn" aria-haspopup="true" aria-expanded="false" aria-label="Change theme">
+        <span class="theme-dot"></span><span class="theme-name" id="themeName">Nebula</span><span class="theme-caret">▾</span>
+      </button>
+      <div class="theme-menu" id="themeMenu" role="menu">
+        <button data-set-theme="nebula" role="menuitemradio"><span class="sw" style="--sw:#22d3ee"></span>Nebula</button>
+        <button data-set-theme="terminal" role="menuitemradio"><span class="sw" style="--sw:#33ff66"></span>Terminal</button>
+        <button data-set-theme="dashboard" role="menuitemradio"><span class="sw" style="--sw:#38e1ff"></span>Dashboard</button>
+        <button data-set-theme="blueprint" role="menuitemradio"><span class="sw" style="--sw:#7fd8ff"></span>Blueprint</button>
+        <button data-set-theme="light" role="menuitemradio"><span class="sw" style="--sw:#6d28d9"></span>Light</button>
+      </div>
     </div>
     <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span></button>
   </div>

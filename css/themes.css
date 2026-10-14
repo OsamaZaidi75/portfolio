@@ -1,0 +1,109 @@
+/* Alternate portfolio themes. The default "nebula" theme lives in :root (style.css).
+   Each theme overrides the same variable set; the 3D hero repaints via JS. */
+
+/* ---------- Terminal: phosphor green / amber on near-black ---------- */
+html[data-theme="terminal"] {
+  --bg: #040604;
+  --bg2: #090c09;
+  --text: #c9f2d0;
+  --muted: #7d8f7e;
+  --a1: #33ff66;
+  --a1-rgb: 51, 255, 102;
+  --a2: #ffb000;
+  --a2-rgb: 255, 176, 0;
+  --card: rgba(51, 255, 102, 0.045);
+  --border: rgba(51, 255, 102, 0.18);
+  --radius: 10px;
+  --font-display: var(--font-mono);
+  --font-body: var(--font-mono);
+  --wash: rgba(51, 255, 102, 0.045);
+  --line-soft: rgba(51, 255, 102, 0.32);
+  --nav-bg: rgba(4, 6, 4, 0.86);
+  --drawer-bg: rgba(4, 6, 4, 0.98);
+  --btn-text: #040604;
+  --hero-grad-from: #d6ffe0;
+  --scan-opacity: 0.45;
+}
+html[data-theme="terminal"] .btn,
+html[data-theme="terminal"] .hero-badge,
+html[data-theme="terminal"] .nav-cta,
+html[data-theme="terminal"] .theme-btn { border-radius: 8px; }
+html[data-theme="terminal"] .theme-menu { border-radius: 10px; }
+html[data-theme="terminal"] .section-kicker::before { content: "$ "; }
+
+/* ---------- Dashboard: ops-console glow, cyan -> violet ---------- */
+html[data-theme="dashboard"] {
+  --bg: #0a0d18;
+  --bg2: #0e1224;
+  --text: #f2f4fb;
+  --muted: #8f97b8;
+  --a1: #38e1ff;
+  --a1-rgb: 56, 225, 255;
+  --a2: #a06bff;
+  --a2-rgb: 160, 107, 255;
+  --card: rgba(120, 140, 255, 0.055);
+  --border: rgba(120, 140, 255, 0.16);
+  --wash: rgba(120, 140, 255, 0.05);
+  --line-soft: rgba(160, 180, 255, 0.3);
+  --nav-bg: rgba(10, 13, 24, 0.8);
+  --drawer-bg: rgba(10, 13, 24, 0.97);
+  --btn-text: #0a0d18;
+  --hero-grad-from: #ffffff;
+}
+html[data-theme="dashboard"] .project-card:hover,
+html[data-theme="dashboard"] .skill-group:hover {
+  box-shadow: 0 0 34px rgba(var(--a1-rgb), 0.16), 0 18px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* ---------- Blueprint: engineering schematic on blueprint blue ---------- */
+html[data-theme="blueprint"] {
+  --bg: #123a6d;
+  --bg2: #0e2f5a;
+  --text: #f4f8ff;
+  --muted: #b9cbe8;
+  --a1: #ffd166;
+  --a1-rgb: 255, 209, 102;
+  --a2: #7fd8ff;
+  --a2-rgb: 127, 216, 255;
+  --card: rgba(255, 255, 255, 0.05);
+  --border: rgba(255, 255, 255, 0.24);
+  --wash: rgba(255, 255, 255, 0.045);
+  --line-soft: rgba(255, 255, 255, 0.38);
+  --nav-bg: rgba(14, 47, 90, 0.84);
+  --drawer-bg: rgba(14, 47, 90, 0.97);
+  --btn-text: #0e2f5a;
+  --hero-grad-from: #ffffff;
+  --bg-image:
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.055) 0 1px, transparent 1px 30px),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.055) 0 1px, transparent 1px 30px);
+}
+html[data-theme="blueprint"] .timeline-card,
+html[data-theme="blueprint"] .project-card,
+html[data-theme="blueprint"] .skill-group { border-style: dashed; }
+
+/* ---------- Light: clean, recruiter-friendly ---------- */
+html[data-theme="light"] {
+  --bg: #faf9fc;
+  --bg2: #f1eefb;
+  --text: #17142e;
+  --muted: #5d5878;
+  --a1: #6d28d9;
+  --a1-rgb: 109, 40, 217;
+  --a2: #4f46e5;
+  --a2-rgb: 79, 70, 229;
+  --card: rgba(255, 255, 255, 0.72);
+  --border: rgba(23, 20, 46, 0.12);
+  --wash: rgba(23, 20, 46, 0.035);
+  --line-soft: rgba(23, 20, 46, 0.24);
+  --nav-bg: rgba(250, 249, 252, 0.82);
+  --drawer-bg: rgba(250, 249, 252, 0.97);
+  --btn-text: #ffffff;
+  --hero-grad-from: #17142e;
+  --pulse: #16a34a;
+}
+html[data-theme="light"] #bg3d { opacity: 0.45; }
+html[data-theme="light"] .project-card:hover,
+html[data-theme="light"] .skill-group:hover {
+  box-shadow: 0 18px 44px rgba(23, 20, 46, 0.12);
+}
+html[data-theme="light"] .photo-glow { opacity: 0.16; }

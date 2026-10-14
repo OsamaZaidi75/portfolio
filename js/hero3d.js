@@ -32,16 +32,12 @@ import * as THREE from 'three';
   const colors = new Float32Array(COUNT * 3);
   const speeds = new Float32Array(COUNT);
   const phases = new Float32Array(COUNT);
-  const cyan = new THREE.Color(0x22d3ee);
-  const violet = new THREE.Color(0x8b5cf6);
   const tmp = new THREE.Color();
 
   for (let i = 0; i < COUNT; i++) {
     positions[i * 3] = (Math.random() - 0.5) * 90;      // x
     positions[i * 3 + 1] = (Math.random() - 0.5) * 60;  // y
     positions[i * 3 + 2] = (Math.random() - 0.5) * 40;  // z
-    tmp.copy(cyan).lerp(violet, Math.random());
-    colors[i * 3] = tmp.r; colors[i * 3 + 1] = tmp.g; colors[i * 3 + 2] = tmp.b;
     speeds[i] = 0.6 + Math.random() * 1.8;
     phases[i] = Math.random() * Math.PI * 2;
   }
@@ -77,6 +73,31 @@ import * as THREE from 'three';
     new THREE.LineBasicMaterial({ color: 0x22d3ee, transparent: true, opacity: 0.07 })
   );
   scene.add(lines);
+
+  // Theme-aware particle colors, synced with the site theme switcher
+  const THEME_COLORS = {
+    nebula:    { c1: 0x22d3ee, c2: 0x8b5cf6, line: 0x22d3ee, fog: 0x06060c },
+    terminal:  { c1: 0x33ff66, c2: 0xffb000, line: 0x33ff66, fog: 0x040604 },
+    dashboard: { c1: 0x38e1ff, c2: 0xa06bff, line: 0x38e1ff, fog: 0x0a0d18 },
+    blueprint: { c1: 0x7fd8ff, c2: 0xffd166, line: 0x7fd8ff, fog: 0x123a6d },
+    light:     { c1: 0x6d28d9, c2: 0x4f46e5, line: 0x6d28d9, fog: 0xfaf9fc }
+  };
+  const colA = new THREE.Color(), colB = new THREE.Color();
+  const colorAttr = geo.getAttribute('color');
+  function paintTheme(name) {
+    const t = THEME_COLORS[name] || THEME_COLORS.nebula;
+    colA.setHex(t.c1); colB.setHex(t.c2);
+    for (let i = 0; i < COUNT; i++) {
+      tmp.copy(colA).lerp(colB, Math.random());
+      colors[i * 3] = tmp.r; colors[i * 3 + 1] = tmp.g; colors[i * 3 + 2] = tmp.b;
+    }
+    colorAttr.needsUpdate = true;
+    lines.material.color.setHex(t.line);
+    scene.fog.color.setHex(t.fog);
+  }
+  const initialTheme = (document.documentElement.dataset && document.documentElement.dataset.theme) || 'nebula';
+  paintTheme(initialTheme);
+  window.__setHeroTheme = paintTheme;
 
   // Mouse parallax
   let mx = 0, my = 0, tx = 0, ty = 0;

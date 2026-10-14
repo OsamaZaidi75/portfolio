@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Osama Shahid — Senior Data Engineer</title>
+<meta name="description" content="Osama Shahid is a Senior Data Engineer building production data platforms on AWS and Azure Databricks. PySpark, Kafka, Delta Lake, streaming pipelines." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2306060c'/%3E%3Ctext x='32' y='42' font-family='Arial' font-size='28' font-weight='bold' text-anchor='middle' fill='%2322d3ee'%3EOS%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<canvas id="bg3d" aria-hidden="true"></canvas>
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="logo">OS<span>.</span></a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span></button>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="container hero-inner">
+    <div class="hero-badge" data-reveal><span class="pulse"></span>Open to new opportunities</div>
+    <h1 class="hero-title" data-reveal>Osama Shahid</h1>
+    <p class="hero-role" data-reveal>Senior Data Engineer</p>
+    <p class="hero-tagline" data-reveal>I build data platforms that move <strong>50M+ records a day</strong> — reliably, observably, and on time.</p>
+    <div class="hero-ctas" data-reveal>
+      <a href="#projects" class="btn btn-primary magnetic">View my work</a>
+      <a href="#contact" class="btn btn-ghost magnetic">Get in touch</a>
+    </div>
+    <div class="hero-stats" data-reveal>
+      <div class="stat"><span class="stat-num" data-count="4" data-suffix="+">0</span><span class="stat-label">years in production data</span></div>
+      <div class="stat"><span class="stat-num" data-count="15" data-suffix="+">0</span><span class="stat-label">TB migrated with &lt;5 min downtime</span></div>
+      <div class="stat"><span class="stat-num" data-count="50" data-suffix="M+">0</span><span class="stat-label">records processed daily</span></div>
+    </div>
+  </div>
+  <a href="#about" class="scroll-hint" aria-label="Scroll down"><span></span></a>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>PySpark</span><span>Apache Spark</span><span>Kafka</span><span>AWS Glue</span><span>Databricks</span><span>Delta Lake</span><span>Unity Catalog</span><span>Airflow</span><span>SQL</span><span>Python</span><span>MSK</span><span>Lambda</span><span>Delta Live Tables</span><span>Auto Loader</span>
+    <span>PySpark</span><span>Apache Spark</span><span>Kafka</span><span>AWS Glue</span><span>Databricks</span><span>Delta Lake</span><span>Unity Catalog</span><span>Airflow</span><span>SQL</span><span>Python</span><span>MSK</span><span>Lambda</span><span>Delta Live Tables</span><span>Auto Loader</span>
+  </div>
+</div>
+
+<section class="section" id="about">
+  <div class="container about-grid">
+    <div class="about-photo" data-reveal>
+      <img src="assets/photo.jpg" alt="Osama Shahid" />
+      <div class="photo-glow"></div>
+    </div>
+    <div class="about-text">
+      <p class="section-kicker" data-reveal>About</p>
+      <h2 data-reveal>Data pipelines are products.<br />I treat them that way.</h2>
+      <p data-reveal>I'm a Senior Data Engineer with 4 years at TCS, building production data platforms on AWS and Azure Databricks for Eli Lilly — from CDC-based migrations of 15+ TB to medallion lakehouses serving 40+ dashboards.</p>
+      <p data-reveal>My happy place is the unglamorous middle: schema evolution that doesn't page anyone at 3 AM, backfills that just work, and streaming pipelines with honest latency numbers.</p>
+      <div class="about-counters" data-reveal>
+        <div class="counter"><span class="counter-num" data-count="90" data-suffix="%">0</span><span class="counter-label">fewer schema incidents</span></div>
+        <div class="counter"><span class="counter-num" data-count="40" data-suffix="%">0</span><span class="counter-label">fewer pipeline failures</span></div>
+        <div class="counter"><span class="counter-num" data-count="45" data-suffix="%">0</span><span class="counter-label">faster Spark jobs</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="experience">
+  <div class="container">
+    <p class="section-kicker" data-reveal>Experience</p>
+    <h2 data-reveal>Where I've shipped</h2>
+    <div class="timeline">
+      <div class="timeline-item" data-reveal>
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-head"><h3>IT Analyst — Senior Data Engineer, Tech Lead</h3><span class="timeline-date">Nov 2022 — Present</span></div>
+          <p class="timeline-org">Tata Consultancy Services · Client: Eli Lilly (Life Sciences) · Noida, India</p>
+          <ul>
+            <li>Migrated <strong>15+ TB</strong> of biomedical and commercial data from SQL Server to Aurora PostgreSQL with <strong>under 5 minutes</strong> of downtime — CDC pipelines on DMS, Glue PySpark and Step Functions, 120+ stored procedures converted.</li>
+            <li>Built bronze–silver–gold lakehouses on Azure Databricks processing <strong>50M+ records/day</strong> at 15-minute freshness — Auto Loader ingestion, Delta Live Tables, Unity Catalog governance.</li>
+            <li>Cut schema-related incidents <strong>~90%</strong> with metadata-driven ingestion and data-quality frameworks adopted across 80+ pipelines.</li>
+            <li>Tech lead of a 4-engineer pod; cut pipeline failures 40% across 30+ Airflow DAGs with retries, backfills and SLA alerting.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="projects">
+  <div class="container">
+    <p class="section-kicker" data-reveal>Projects</p>
+    <h2 data-reveal>Things I've built</h2>
+    <div class="projects-grid">
+      <article class="project-card" data-reveal>
+        <div class="project-top"><span class="project-index">01</span><div class="project-links"><a href="https://github.com/OsamaZaidi75/sql-rag" target="_blank" rel="noopener">GitHub</a></div></div>
+        <h3>sql-rag</h3>
+        <p>Natural-language to SQL studio. Hybrid dense + BM25 retrieval with reciprocal-rank fusion, schema pruning, and a repair loop that fixes its own bad queries.</p>
+        <div class="tags"><span>Python</span><span>RAG</span><span>Streamlit</span><span>SQLite</span></div>
+      </article>
+      <article class="project-card" data-reveal>
+        <div class="project-top"><span class="project-index">02</span><div class="project-links"><a href="https://github.com/OsamaZaidi75/pharma-rag" target="_blank" rel="noopener">GitHub</a></div></div>
+        <h3>pharma-rag</h3>
+        <p>Pharmaceutical Q&A over DailyMed drug labels. Hybrid retrieval, conversational follow-ups, and a ReAct agent mode — every answer fully cited.</p>
+        <div class="tags"><span>Python</span><span>Agents</span><span>ChromaDB</span><span>Gemini</span></div>
+      </article>
+      <article class="project-card" data-reveal>
+        <div class="project-top"><span class="project-index">03</span><div class="project-links"><a href="https://ps5-booking-website-frontend.vercel.app/" target="_blank" rel="noopener">Live</a><a href="https://github.com/OsamaZaidi75/ps5-booking-website" target="_blank" rel="noopener">GitHub</a></div></div>
+        <h3>ps5-booking</h3>
+        <p>Real-time slot booking platform. Manual approval flow, overlap-safe reservations, and email confirmations on a serverless stack.</p>
+        <div class="tags"><span>Vercel</span><span>Supabase</span><span>PostgreSQL</span></div>
+      </article>
+      <article class="project-card" data-reveal>
+        <div class="project-top"><span class="project-index">04</span><div class="project-links"><a href="https://github.com/OsamaZaidi75/privatewire-vpn" target="_blank" rel="noopener">GitHub</a></div></div>
+        <h3>privatewire-vpn</h3>
+        <p>Personal WireGuard VPN. Kotlin Android client paired with one-command server provisioning scripts.</p>
+        <div class="tags"><span>Kotlin</span><span>WireGuard</span><span>Ubuntu</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="skills">
+  <div class="container">
+    <p class="section-kicker" data-reveal>Skills</p>
+    <h2 data-reveal>The toolbox</h2>
+    <div class="skills-grid">
+      <div class="skill-group" data-reveal><h3>Languages</h3><div class="tags"><span>Python</span><span>PySpark</span><span>SQL</span><span>Spark SQL</span><span>JavaScript</span></div></div>
+      <div class="skill-group" data-reveal><h3>AWS</h3><div class="tags"><span>Glue</span><span>Lambda</span><span>Step Functions</span><span>DMS</span><span>S3</span><span>Aurora PostgreSQL</span><span>MSK</span><span>EventBridge</span><span>Athena</span></div></div>
+      <div class="skill-group" data-reveal><h3>Azure &amp; Databricks</h3><div class="tags"><span>Databricks</span><span>Delta Lake</span><span>Unity Catalog</span><span>Delta Live Tables</span><span>Auto Loader</span><span>Databricks SQL</span><span>ADF</span></div></div>
+      <div class="skill-group" data-reveal><h3>Data Engineering</h3><div class="tags"><span>ETL / ELT</span><span>CDC</span><span>Spark Structured Streaming</span><span>Medallion Architecture</span><span>Dimensional Modeling</span><span>Data Quality</span><span>Data Lineage</span><span>REST APIs</span></div></div>
+      <div class="skill-group" data-reveal><h3>DevOps</h3><div class="tags"><span>Airflow</span><span>GitHub Actions</span><span>Docker</span><span>CloudFormation</span><span>Terraform</span><span>Git</span></div></div>
+      <div class="skill-group" data-reveal><h3>Certifications</h3><div class="tags cert"><span>AWS Certified Data Engineer — Associate</span><span>Azure Database Administrator Associate</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="container contact-inner">
+    <p class="section-kicker" data-reveal>Contact</p>
+    <h2 class="contact-title" data-reveal>Let's build something<br />that <em>scales</em>.</h2>
+    <p class="contact-sub" data-reveal>Currently open to data engineering roles and interesting collaborations.</p>
+    <div class="contact-links" data-reveal>
+      <a href="mailto:osamazaidi75@gmail.com" class="btn btn-primary magnetic">osamazaidi75@gmail.com</a>
+      <a href="https://www.linkedin.com/in/osama-shahid-391b84aa/" target="_blank" rel="noopener" class="btn btn-ghost magnetic">LinkedIn</a>
+      <a href="https://github.com/OsamaZaidi75" target="_blank" rel="noopener" class="btn btn-ghost magnetic">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span>© <span id="year">2026</span> Osama Shahid</span>
+    <span class="footer-note">Designed &amp; built by hand — no templates.</span>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+<script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }</script>
+<script type="module" src="js/hero3d.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -85,7 +85,7 @@ import * as THREE from 'three';
   const colA = new THREE.Color(), colB = new THREE.Color();
   const colorAttr = geo.getAttribute('color');
   function paintTheme(name) {
-    const t = THEME_COLORS[name] || THEME_COLORS.nebula;
+    const t = THEME_COLORS[name] || THEME_COLORS.terminal;
     colA.setHex(t.c1); colB.setHex(t.c2);
     for (let i = 0; i < COUNT; i++) {
       tmp.copy(colA).lerp(colB, Math.random());
@@ -95,7 +95,7 @@ import * as THREE from 'three';
     lines.material.color.setHex(t.line);
     scene.fog.color.setHex(t.fog);
   }
-  const initialTheme = (document.documentElement.dataset && document.documentElement.dataset.theme) || 'nebula';
+  const initialTheme = (document.documentElement.dataset && document.documentElement.dataset.theme) || 'terminal';
   paintTheme(initialTheme);
   window.__setHeroTheme = paintTheme;
 

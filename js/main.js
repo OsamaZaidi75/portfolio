@@ -174,7 +174,7 @@
   var themeBtn = document.getElementById('themeBtn');
   var themeName = document.getElementById('themeName');
   function setTheme(name) {
-    if (!THEMES[name]) name = 'nebula';
+    if (!THEMES[name]) name = 'terminal';
     document.documentElement.dataset.theme = name;
     try { localStorage.setItem(THEME_KEY, name); } catch (e) {}
     if (themeName) themeName.textContent = THEMES[name];
@@ -211,7 +211,7 @@
       }
     });
   }
-  setTheme(document.documentElement.dataset.theme || 'nebula');
+  setTheme(document.documentElement.dataset.theme || 'terminal');
 
   /* ---------- Footer year ---------- */
   document.getElementById('year').textContent = new Date().getFullYear();

@@ -30,6 +30,11 @@ html[data-theme="terminal"] .nav-cta,
 html[data-theme="terminal"] .theme-btn { border-radius: 8px; }
 html[data-theme="terminal"] .theme-menu { border-radius: 10px; }
 html[data-theme="terminal"] .section-kicker::before { content: "$ "; }
+html[data-theme="terminal"] body::after {
+  background:
+    repeating-linear-gradient(0deg, transparent 0 2px, rgba(51, 255, 102, 0.08) 2px 4px),
+    radial-gradient(ellipse at center, transparent 52%, rgba(0, 0, 0, 0.42) 100%);
+}
 
 /* ---------- Dashboard: ops-console glow, cyan -> violet ---------- */
 html[data-theme="dashboard"] {

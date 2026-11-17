@@ -161,8 +161,11 @@ a { color: inherit; }
 .project-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
 .project-index { font-family: var(--font-display); color: var(--muted); font-size: 14px; letter-spacing: 2px; }
 .project-links { display: flex; gap: 14px; }
-.project-links a { font-size: 13.5px; font-weight: 600; color: var(--a1); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.25s; }
-.project-links a:hover { border-bottom-color: var(--a1); }
+.project-links a { font-size: 12.5px; font-weight: 600; color: var(--a1); text-decoration: none; border: 1px solid rgba(var(--a1-rgb),0.45); border-radius: 999px; padding: 5px 12px; background: rgba(var(--a1-rgb),0.08); transition: background 0.25s, border-color 0.25s; }
+.project-links a:hover { background: rgba(var(--a1-rgb),0.18); border-color: rgba(var(--a1-rgb),0.8); }
+.project-card { cursor: pointer; }
+.project-links a.card-link::after { content: ""; position: absolute; inset: 0; }
+.project-links a:not(.card-link) { position: relative; z-index: 1; }
 .project-card h3 { font-size: 24px; margin-bottom: 12px; }
 .project-card p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
 

@@ -1,6 +1,6 @@
 # Osama Shahid — Portfolio
 
-Senior Data Engineer portfolio. Interactive 3D data-stream hero (Three.js), buttery smooth scrolling (Lenis + GSAP ScrollTrigger), custom cursor, magnetic buttons, animated counters.
+AI Data Engineer portfolio. Interactive 3D data-stream hero (Three.js), buttery smooth scrolling (Lenis + GSAP ScrollTrigger), custom cursor, magnetic buttons, animated counters.
 
 **Live:** https://osamazaidi.com
 
